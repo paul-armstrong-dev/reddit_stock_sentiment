@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas="*"
+praw="*"
+spacy="*"
+nltk="*"
+en_core_web_trf = {file = "https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.1.0/en_core_web_trf-3.1.0.tar.gz"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
