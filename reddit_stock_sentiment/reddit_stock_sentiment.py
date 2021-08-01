@@ -12,7 +12,7 @@ subreddits_to_search = [ "wallstreetbets", "finance", "StockMarket", "FinanceNew
 
 try:
     nlp = spacy.load('en_core_web_trf')
-except OSError:
+except ValueError:
     logger.warning('Downloading language model for the spaCy POS tagger\n'
         "(don't worry, this will only happen once)")
     from spacy.cli import download
