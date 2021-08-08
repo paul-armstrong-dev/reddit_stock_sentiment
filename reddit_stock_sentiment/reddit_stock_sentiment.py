@@ -7,8 +7,6 @@ from typing import List, Dict
 
 from loguru import logger
 # Load English tokenizer, tagger, parser, NER and word vectors
-subreddits_to_search = [ "wallstreetbets", "finance", "StockMarket", "FinanceNews", "StockNews"]
-
 
 try:
     nlp = spacy.load('en_core_web_trf')
@@ -71,7 +69,7 @@ class RedditStockSentiment():
 
         return submissions
 
-    def get_scored_and_idd_df(self):
+    def get_scored_and_idd_df(self, subreddits_to_search: List):
         submissions = self.get_all_reddit_data(subreddits_to_search)
         df = pd.DataFrame.from_records(submissions[0])
         df["sentiment_score"] = df.apply(lambda row: self.score_text_sentiment(row["title"]), axis=1)
