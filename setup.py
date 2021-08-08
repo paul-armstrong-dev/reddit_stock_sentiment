@@ -10,7 +10,13 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ["pandas==1.3.1",
+                "spacy==3.1.1",
+                "nltk==3.6.2",
+                "loguru==0.5.3",
+                "python-dotenv==0.19.0",
+                "praw==7.4.0"
+                ]
 
 test_requirements = [ ]
 
